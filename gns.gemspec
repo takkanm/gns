@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = Gns::VERSION
   gem.authors       = ["Mitsutaka Mimura"]
   gem.email         = ["takkanm@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
+  gem.description   = %q{GitHub Notifications Service}
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
 
