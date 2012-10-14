@@ -12,7 +12,7 @@ module Gns
       get_rss_items.find_all {|item|
         item.updated > @last_updated
       }.tap {|items|
-        @last_updated = items.first.updated if items
+        @last_updated = items.first.updated if items.first
       }
     end
 
