@@ -17,7 +17,7 @@ Forever.run do
 
   every 1.minutes do
     @github_rss.recent_items.each do |item|
-      TerminalNotifier.notify item.title, title: item.repo
+      TerminalNotifier.notify item.title, title: item.repo, open: item.url
     end
   end
 end
