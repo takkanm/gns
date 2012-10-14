@@ -1,2 +1,2 @@
 ---
-:url: https://github.com/#{username}.private.atom?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+:private_rss_url: https://github.com/#{username}.private.atom?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
