@@ -1,0 +1,23 @@
+#! /usr/bin/env ruby
+
+require 'pathname'
+require 'yaml'
+require 'forever'
+require 'terminal-notifier'
+require_relative '../lib/gns'
+
+GNS_RC_FILE = '~/.gnsrc'
+
+Forever.run do
+  before :all do
+    rc_file_path = Pathname.new(GNS_RC_FILE).expand_path
+    @settings = YAML.load_file(rc_file_path)
+    @github_rss = GithubRss.new(@settings[:url])
+  end
+
+  every 1.minutes do
+    @github_rss.recent_items.each do |item|
+      TerminalNotifier.notify item.title, title: item.repo
+    end
+  end
+end
