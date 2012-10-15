@@ -1,2 +1,3 @@
 ---
-:private_rss_url: https://github.com/#{username}.private.atom?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+# personalized GitHub feed in https://github.com
+:private_atom_url: https://github.com/#{username}.private.atom?token=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
