@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Mitsutaka Mimura"]
   gem.email         = ["takkanm@gmail.com"]
   gem.description   = %q{GitHub Notifications Service}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{ Write a gem summary}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
