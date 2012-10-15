@@ -10,7 +10,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+1. `rake build` & `gem install pkg/gns.gem`
+1. copy from sample/gnsrc to ~/.gncrc
+2. edit private atom at gncrc
+3. start `gns`
+4. stop `gns stop`
+
 
 ## Contributing
 
