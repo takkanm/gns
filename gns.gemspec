@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Gns::VERSION
   gem.authors       = ["Mitsutaka Mimura"]
   gem.email         = ["takkanm@gmail.com"]
-  gem.description   = %q{GitHub Notifications Service}
-  gem.summary       = %q{ Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{GitHub personalized feed Notifications Service}
+  gem.summary       = %q{GitHub personalized feed Notifications Service}
+  gem.homepage      = "https://github.com/takkanm/gns"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
