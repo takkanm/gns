@@ -1,4 +1,5 @@
 require 'rss'
+require 'openssl'
 require 'open-uri'
 
 module Gns
@@ -17,7 +18,7 @@ module Gns
     end
 
     def get_atom_items
-      RSS::Parser.parse(open(@url)).items.map {|item|
+      RSS::Parser.parse(open(@url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE)).items.map {|item|
         GithubItem.new(item)
       }
     end
