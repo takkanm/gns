@@ -1,21 +1,34 @@
-# Gns
+# gns
 
-TODO: Write a gem description
+GitHub personalized feed Notification Service use Mountain Lion Notification Center.
 
 ## Installation
 
 Or install it yourself as:
 
-    $ gem install gns
+```
+$ gem install gns
+```
 
 ## Usage
 
 1. `rake build` & `gem install pkg/gns.gem`
 1. copy from sample/gnsrc to ~/.gncrc
 2. edit private atom at gncrc
-3. start `gns`
-4. stop `gns stop`
 
+## Usage
+
+### Start
+
+```
+$ gns
+```
+
+### Stop
+
+```
+$ gns stop
+```
 
 ## Contributing
 
