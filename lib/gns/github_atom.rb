@@ -1,12 +1,13 @@
 require 'rss'
 require 'openssl'
-require 'open-uri'
+require 'httpclient'
 
 module Gns
   class GithubAtom
     def initialize(url, start_time = Time.now)
       @url = url
       @last_updated = start_time
+      @client = HTTPClient.new
     end
 
     def recent_items
@@ -18,9 +19,13 @@ module Gns
     end
 
     def get_atom_items
-      RSS::Parser.parse(open(@url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE)).items.map {|item|
+      RSS::Parser.parse(get_atom).items.map {|item|
         GithubItem.new(item)
       }
+    end
+
+    def get_atom
+      @client.get_content(@url)
     end
   end
 
